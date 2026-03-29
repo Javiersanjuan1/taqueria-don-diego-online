@@ -26,20 +26,18 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="tel:911432634"
+            href="#pedidos"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-body font-semibold text-lg hover:opacity-90 transition-opacity"
           >
-            <Phone className="w-5 h-5" />
-            911 43 26 34
+            <ShoppingBag className="w-5 h-5" />
+            Hacer Pedido
           </a>
           <a
-            href="https://www.google.com/maps?ftid=0xd42275f5df019e7:0x72bbe1713c0e8090"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#carta"
             className="flex items-center gap-2 border border-foreground/30 text-foreground px-6 py-3 rounded-lg font-body font-semibold text-lg hover:bg-foreground/10 transition-colors"
           >
-            <MapPin className="w-5 h-5" />
-            Cómo llegar
+            <UtensilsCrossed className="w-5 h-5" />
+            Carta
           </a>
         </div>
       </div>
