@@ -28,11 +28,10 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="tel:911432634"
+            href="#pedidos"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md font-body font-semibold text-sm"
           >
-            <Phone className="w-4 h-4" />
-            Pedido
+            Hacer Pedido
           </a>
         </div>
 
@@ -58,11 +57,10 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="tel:911432634"
+            href="#pedidos"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md font-body font-semibold text-sm w-fit"
           >
-            <Phone className="w-4 h-4" />
-            911 43 26 34
+            Hacer Pedido
           </a>
         </div>
       )}
