@@ -1,5 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
-import { Phone, MapPin } from "lucide-react";
+import { UtensilsCrossed, ShoppingBag } from "lucide-react";
 
 const HeroSection = () => {
   return (
