@@ -5,7 +5,6 @@ import AboutSection from "@/components/AboutSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import OrderSection from "@/components/OrderSection";
 import LocationSection from "@/components/LocationSection";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { MapPin, Phone, Instagram, Facebook } from "lucide-react";
@@ -70,7 +69,7 @@ const Index = () => {
         </div>
       </footer>
 
-      <WhatsAppButton />
+      <ScrollToTop />
       <ScrollToTop />
     </div>
   );
