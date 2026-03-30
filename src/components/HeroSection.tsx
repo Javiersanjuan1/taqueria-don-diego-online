@@ -15,12 +15,6 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="inline-block bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 mb-6 animate-fade-in">
-          <span className="text-primary font-body font-semibold text-sm tracking-wide">
-            🌮 Auténtica cocina mexicana en Madrid
-          </span>
-        </div>
-
         <h1 className="font-display text-6xl sm:text-8xl md:text-9xl tracking-tight text-foreground mb-2 drop-shadow-2xl animate-fade-in-up">
           TAQUERÍA
         </h1>

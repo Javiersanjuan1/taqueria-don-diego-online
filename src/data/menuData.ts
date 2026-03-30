@@ -45,7 +45,8 @@ export const menuCategories: MenuCategory[] = [
       { name: "Quesabirria", description: "Birria con queso gratinado" },
       { name: "Chorizo", description: "Chorizo desmigado y queso gratinado" },
       { name: "Jalapeño", description: "Chile picante en rodaja con queso gratinado" },
-      { name: "Cochinita", description: "Cochinita pibil con queso gratinado" },
+      { name: "Cochinita pibil", description: "Cerdo marinado con queso gratinado" },
+      { name: "Vegetariana", description: "Vegetales a la plancha con queso gratinado" },
     ],
   },
   {
@@ -83,6 +84,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Tiras rancheras", description: "Tiras de ternera, pimientos, cebolla a la plancha acompañado de arroz y frejol ranchero", price: "13,00 €" },
       { name: "Enchiladas", description: "Taquitos fritos rellenos de pollo, bañado en salsa verde con queso gratinado", price: "12,00 €" },
       { name: "Tostadas de tinga", description: "Tortilla de maíz fritas con frejol, tinga de pollo, lechuga, queso fresco y nata", price: "5,00 €" },
+      { name: "Pozole", description: "Caldo tradicional mexicano hecho a base de granos de maíz nixtamalizados, carnes y especias variadas, se acompaña de repollo y rábanos", price: "7,00 €" },
       { name: "Chilaquiles", description: "Tortilla de maíz fritas con salsa roja (picante) ó salsa verde (no picante) queso gratinado y nata", variants: [{ label: "Grande", price: "13,00 €" }, { label: "Pequeño", price: "7,50 €" }] },
       { name: "Flautas", description: "Tres taquitos crujiente enrollados con pollo, lechuga, nata y queso (3 unidades)", price: "9,50 €" },
       { name: "Chilitos rellenos", description: "Jalapeños rellenos de queso, empanizados y fritos (6 unidades)", price: "8,00 €" },
@@ -95,7 +97,7 @@ export const menuCategories: MenuCategory[] = [
     title: "CÓCTELES",
     color: "text-magenta",
     items: [
-      { name: "Margarita", description: "Un clásico mexicano que mezcla tequila, sabor a elegir y licor de naranja. Se sirve en un vaso escarchado con sal y tajín", price: "7,50 €", flavors: ["Limón", "Tamarindo", "Mango", "Jamaica", "Piña", "Maracuya", "Fresa"] },
+      { name: "Margarita", description: "Un clásico mexicano que mezcla tequila, sabor a elegir y licor de naranja. Se sirve en un vaso escarchado con sal y tajín", price: "7,50 €", flavors: ["Limón", "Tamarindo", "Mango", "Jamaica", "Piña", "Maracuya", "Fresa"], variants: [{ label: "Jarra 1L", price: "29,00 €" }] },
       { name: "Mojito", description: "Un coctel refrescante y ligeramente dulce, originario de Cuba. Combina ron blanco, jugo de limón, hojas de menta fresca, azúcar y soda", price: "7,50 €" },
       { name: "Piña Colada", description: "Originario de Puerto Rico, este coctel tropical combina ron, crema de coco y jugo de piña, generalmente servido con hielo", price: "8,00 €" },
       { name: "Michelada", description: "Una bebida mexicana picante. Se prepara mezclando cerveza con jugo de limón, salsas negra, clamato, sal y pimienta. Se sirve en un vaso escarchado con chamoy y tajín", price: "8,00 €" },

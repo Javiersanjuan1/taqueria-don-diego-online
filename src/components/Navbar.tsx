@@ -27,7 +27,6 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="aztec-border" />
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <a href="#" className="font-display text-3xl text-primary tracking-wide hover:opacity-80 transition-opacity">
           DON DIEGO
