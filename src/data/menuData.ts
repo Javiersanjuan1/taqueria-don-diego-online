@@ -97,7 +97,7 @@ export const menuCategories: MenuCategory[] = [
     title: "CÓCTELES",
     color: "text-magenta",
     items: [
-      { name: "Margarita", description: "Un clásico mexicano que mezcla tequila, sabor a elegir y licor de naranja. Se sirve en un vaso escarchado con sal y tajín", price: "7,50 €", flavors: ["Limón", "Tamarindo", "Mango", "Jamaica", "Piña", "Maracuya", "Fresa"] },
+      { name: "Margarita", description: "Un clásico mexicano que mezcla tequila, sabor a elegir y licor de naranja. Se sirve en un vaso escarchado con sal y tajín", price: "7,50 €", flavors: ["Limón", "Tamarindo", "Mango", "Jamaica", "Piña", "Maracuya", "Fresa"], variants: [{ label: "Jarra 1L", price: "29,00 €" }] },
       { name: "Mojito", description: "Un coctel refrescante y ligeramente dulce, originario de Cuba. Combina ron blanco, jugo de limón, hojas de menta fresca, azúcar y soda", price: "7,50 €" },
       { name: "Piña Colada", description: "Originario de Puerto Rico, este coctel tropical combina ron, crema de coco y jugo de piña, generalmente servido con hielo", price: "8,00 €" },
       { name: "Michelada", description: "Una bebida mexicana picante. Se prepara mezclando cerveza con jugo de limón, salsas negra, clamato, sal y pimienta. Se sirve en un vaso escarchado con chamoy y tajín", price: "8,00 €" },
