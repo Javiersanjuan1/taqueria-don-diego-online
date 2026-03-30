@@ -195,6 +195,57 @@ export const menuCategories: MenuCategory[] = [
       { name: "Agua con gas 1/2l", price: "2,50 €" },
     ],
   },
+  {
+    id: "postres",
+    title: "POSTRES",
+    color: "text-magenta",
+    items: [
+      { name: "Tarta 3 leches", description: "Bizcocho humedecido con leche evaporada, leche condensada y crema de leche", price: "5,50 €" },
+      { name: "Tarta de elote", description: "Bizcocho de maíz", price: "4,50 €" },
+      { name: "Crepas con cajetas", description: "Crep bañado en dulce de leche mexicano, coronado con una bola de helado de vainilla", price: "5,50 €" },
+      { name: "Cafe de la olla", description: "Cafe especial con canela, clavo, cáscara de naranja y endulzado con panela", price: "1,30 €" },
+    ],
+  },
+  {
+    id: "vodka",
+    title: "VODKA",
+    subtitle: "Combinados",
+    color: "text-primary",
+    items: [
+      { name: "Absolut", description: "Comb", price: "6,00 €" },
+      { name: "Tanqueray", description: "Comb", price: "6,00 €" },
+      { name: "Bombay Sapphire", description: "Comb", price: "6,00 €" },
+      { name: "Stolichnaya", description: "Comb", price: "6,00 €" },
+      { name: "Beefeater", description: "Comb", price: "6,00 €" },
+      { name: "Larios", description: "Comb", price: "5,50 €" },
+    ],
+  },
+  {
+    id: "ron",
+    title: "RON",
+    color: "text-primary",
+    items: [
+      { name: "Santa Teresa", variants: [{ label: "Solo", price: "4,50 €" }, { label: "Comb", price: "6,00 €" }] },
+      { name: "Cacique", variants: [{ label: "Solo", price: "4,50 €" }, { label: "Comb", price: "6,00 €" }] },
+      { name: "Brugal", variants: [{ label: "Solo", price: "4,50 €" }, { label: "Comb", price: "6,00 €" }] },
+      { name: "Barceló", variants: [{ label: "Solo", price: "5,00 €" }, { label: "Comb", price: "7,00 €" }] },
+      { name: "Ron Prohibido", variants: [{ label: "Solo", price: "5,00 €" }, { label: "Comb", price: "7,00 €" }] },
+      { name: "Baileys", description: "Solo", price: "5,00 €" },
+    ],
+  },
+  {
+    id: "whisky",
+    title: "WHISKY",
+    color: "text-secondary",
+    items: [
+      { name: "DYC", variants: [{ label: "Solo", price: "4,70 €" }, { label: "Comb", price: "6,30 €" }] },
+      { name: "Johnnie Walker Red Label", variants: [{ label: "Solo", price: "5,00 €" }, { label: "Comb", price: "6,50 €" }] },
+      { name: "Ballantines", variants: [{ label: "Solo", price: "5,00 €" }, { label: "Comb", price: "6,50 €" }] },
+      { name: "Johnnie Walker Black Label", variants: [{ label: "Solo", price: "6,00 €" }, { label: "Comb", price: "7,50 €" }] },
+      { name: "Old Par", variants: [{ label: "Solo", price: "6,00 €" }, { label: "Comb", price: "7,50 €" }] },
+      { name: "Buchanan's", variants: [{ label: "Solo", price: "8,00 €" }, { label: "Comb", price: "9,50 €" }] },
+    ],
+  },
 ];
 
 export const margaritaJarra = "Jarra 1 litro — 29 €";
