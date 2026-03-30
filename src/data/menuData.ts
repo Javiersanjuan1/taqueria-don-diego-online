@@ -45,7 +45,8 @@ export const menuCategories: MenuCategory[] = [
       { name: "Quesabirria", description: "Birria con queso gratinado" },
       { name: "Chorizo", description: "Chorizo desmigado y queso gratinado" },
       { name: "Jalapeño", description: "Chile picante en rodaja con queso gratinado" },
-      { name: "Cochinita", description: "Cochinita pibil con queso gratinado" },
+      { name: "Cochinita pibil", description: "Cerdo marinado con queso gratinado" },
+      { name: "Vegetariana", description: "Vegetales a la plancha con queso gratinado" },
     ],
   },
   {
