@@ -15,8 +15,9 @@ const categoryImages: Record<string, string> = {
 };
 
 const categoryGroups = [
-  { label: "Comida", icon: "🌮", ids: ["tacos", "quesadillas", "burritos", "alambres", "platos-especiales"] },
+  { label: "Comida", icon: "🌮", ids: ["tacos", "quesadillas", "burritos", "alambres", "platos-especiales", "postres"] },
   { label: "Bebidas", icon: "🍹", ids: ["cocteles", "tequila", "mezcal", "vinos", "cerveza-nacional", "cerveza-mexicana", "bebidas"] },
+  { label: "Licores", icon: "🥃", ids: ["vodka", "ron", "whisky"] },
 ];
 
 const MenuSection = () => {
