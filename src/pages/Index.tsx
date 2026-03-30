@@ -69,7 +69,7 @@ const Index = () => {
         </div>
       </footer>
 
-      <WhatsAppButton />
+      <ScrollToTop />
       <ScrollToTop />
     </div>
   );
