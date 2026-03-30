@@ -84,6 +84,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Tiras rancheras", description: "Tiras de ternera, pimientos, cebolla a la plancha acompañado de arroz y frejol ranchero", price: "13,00 €" },
       { name: "Enchiladas", description: "Taquitos fritos rellenos de pollo, bañado en salsa verde con queso gratinado", price: "12,00 €" },
       { name: "Tostadas de tinga", description: "Tortilla de maíz fritas con frejol, tinga de pollo, lechuga, queso fresco y nata", price: "5,00 €" },
+      { name: "Pozole", description: "Caldo tradicional mexicano hecho a base de granos de maíz nixtamalizados, carnes y especias variadas, se acompaña de repollo y rábanos", price: "7,00 €" },
       { name: "Chilaquiles", description: "Tortilla de maíz fritas con salsa roja (picante) ó salsa verde (no picante) queso gratinado y nata", variants: [{ label: "Grande", price: "13,00 €" }, { label: "Pequeño", price: "7,50 €" }] },
       { name: "Flautas", description: "Tres taquitos crujiente enrollados con pollo, lechuga, nata y queso (3 unidades)", price: "9,50 €" },
       { name: "Chilitos rellenos", description: "Jalapeños rellenos de queso, empanizados y fritos (6 unidades)", price: "8,00 €" },
