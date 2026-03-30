@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { menuCategories } from "@/data/menuData";
+import { UtensilsCrossed, Wine, GlassWater } from "lucide-react";
 import tacosImg from "@/assets/tacos-hero.jpg";
 import burritoImg from "@/assets/burrito.jpg";
 import quesadillaImg from "@/assets/quesadilla.jpg";
@@ -15,17 +16,18 @@ const categoryImages: Record<string, string> = {
 };
 
 const categoryGroups = [
-  { label: "Comida", icon: "🌮", ids: ["tacos", "quesadillas", "burritos", "alambres", "platos-especiales", "postres"] },
-  { label: "Bebidas", icon: "🍹", ids: ["cocteles", "tequila", "mezcal", "vinos", "cerveza-nacional", "cerveza-mexicana", "bebidas"] },
-  { label: "Licores", icon: "🥃", ids: ["vodka", "ron", "whisky"] },
+  { label: "Comida", icon: UtensilsCrossed, ids: ["tacos", "quesadillas", "burritos", "alambres", "platos-especiales", "postres"] },
+  { label: "Bebidas", icon: GlassWater, ids: ["cocteles", "tequila", "mezcal", "vinos", "cerveza-nacional", "cerveza-mexicana", "bebidas"] },
+  { label: "Licores", icon: Wine, ids: ["vodka", "ron", "whisky"] },
 ];
 
 const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeGroup, setActiveGroup] = useState(0);
 
-  const filteredCategories = menuCategories.filter((c) =>
-    categoryGroups[activeGroup].ids.includes(c.id)
+  const filteredCategories = useMemo(
+    () => menuCategories.filter((c) => categoryGroups[activeGroup].ids.includes(c.id)),
+    [activeGroup]
   );
 
   const displayCategories = activeCategory
@@ -49,19 +51,23 @@ const MenuSection = () => {
 
         {/* Group tabs */}
         <div className="flex justify-center gap-3 mb-8 reveal">
-          {categoryGroups.map((group, idx) => (
-            <button
-              key={group.label}
-              onClick={() => { setActiveGroup(idx); setActiveCategory(null); }}
-              className={`px-6 py-3 rounded-xl font-body font-bold text-sm transition-all ${
-                activeGroup === idx
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
-                  : "bg-muted text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {group.icon} {group.label}
-            </button>
-          ))}
+          {categoryGroups.map((group, idx) => {
+            const Icon = group.icon;
+            return (
+              <button
+                key={group.label}
+                onClick={() => { setActiveGroup(idx); setActiveCategory(null); }}
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-body font-bold text-sm transition-all ${
+                  activeGroup === idx
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                    : "bg-muted text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                {group.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Category pills */}
