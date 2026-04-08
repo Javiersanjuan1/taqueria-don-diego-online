@@ -21,14 +21,17 @@ const categoryGroups = [
   { label: "Licores", icon: Wine, ids: ["vodka", "ron", "whisky"] },
 ];
 
+// Pre-compute all groups to avoid recalculation
+const precomputedGroups = categoryGroups.map((group) => ({
+  ...group,
+  categories: menuCategories.filter((c) => group.ids.includes(c.id)),
+}));
+
 const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeGroup, setActiveGroup] = useState(0);
 
-  const filteredCategories = useMemo(
-    () => menuCategories.filter((c) => categoryGroups[activeGroup].ids.includes(c.id)),
-    [activeGroup]
-  );
+  const filteredCategories = precomputedGroups[activeGroup].categories;
 
   const displayCategories = activeCategory
     ? filteredCategories.filter((c) => c.id === activeCategory)
@@ -49,35 +52,38 @@ const MenuSection = () => {
           </p>
         </div>
 
-        {/* Group tabs */}
-        <div className="flex justify-center gap-3 mb-8 reveal">
-          {categoryGroups.map((group, idx) => {
-            const Icon = group.icon;
-            return (
-              <button
-                key={group.label}
-                onClick={() => { setActiveGroup(idx); setActiveCategory(null); }}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-body font-bold text-sm transition-all ${
-                  activeGroup === idx
-                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
-                    : "bg-muted text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <Icon className="w-4 h-4" />
-                {group.label}
-              </button>
-            );
-          })}
+        {/* Group tabs — professional segmented control */}
+        <div className="flex justify-center mb-8 reveal">
+          <div className="inline-flex bg-muted/60 backdrop-blur-sm rounded-2xl p-1.5 border border-border/50 shadow-lg">
+            {categoryGroups.map((group, idx) => {
+              const Icon = group.icon;
+              const isActive = activeGroup === idx;
+              return (
+                <button
+                  key={group.label}
+                  onClick={() => { setActiveGroup(idx); setActiveCategory(null); }}
+                  className={`relative flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-body font-bold text-sm tracking-wide transition-all duration-200 ${
+                    isActive
+                      ? "bg-primary text-primary-foreground shadow-md shadow-primary/30"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
+                  }`}
+                >
+                  <Icon className={`w-5 h-5 ${isActive ? "drop-shadow-sm" : ""}`} />
+                  {group.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Category pills */}
         <div className="flex flex-wrap justify-center gap-2 mb-12 reveal">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-4 py-2 rounded-full font-body text-sm font-semibold transition-all ${
+            className={`px-5 py-2.5 rounded-full font-body text-sm font-semibold transition-all duration-200 ${
               !activeCategory
-                ? "bg-secondary text-secondary-foreground"
-                : "bg-muted/50 text-muted-foreground hover:text-foreground"
+                ? "bg-secondary text-secondary-foreground shadow-sm"
+                : "bg-muted/40 text-muted-foreground hover:text-foreground hover:bg-muted/60"
             }`}
           >
             Todos
@@ -86,10 +92,10 @@ const MenuSection = () => {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-full font-body text-sm font-semibold transition-all ${
+              className={`px-5 py-2.5 rounded-full font-body text-sm font-semibold transition-all duration-200 ${
                 activeCategory === cat.id
-                  ? "bg-secondary text-secondary-foreground"
-                  : "bg-muted/50 text-muted-foreground hover:text-foreground"
+                  ? "bg-secondary text-secondary-foreground shadow-sm"
+                  : "bg-muted/40 text-muted-foreground hover:text-foreground hover:bg-muted/60"
               }`}
             >
               {cat.title}
@@ -123,10 +129,10 @@ const MenuSection = () => {
           </div>
         )}
 
-        {/* Menu items */}
+        {/* Menu items — no reveal class for instant display */}
         <div className="space-y-12">
           {displayCategories.map((category) => (
-            <div key={category.id} className="reveal">
+            <div key={category.id}>
               <div className="flex items-baseline gap-4 mb-6 pb-3 border-b border-border">
                 <h3 className={`font-display text-4xl md:text-5xl ${category.color}`}>
                   {category.title}
